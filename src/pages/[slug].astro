@@ -25,7 +25,7 @@ const {post, posts, settings} = Astro.props as Props;
 ---
 
 <Base meta_title={post.title} description={post.excerpt} image={post.og_image} blogpost>
-    <article class="max-w-screen-md mx-auto">
+    <article class="max-w-screen-md mx-auto mb-12">
       <div class="rounded-lg block overflow-hidden mb-8">
         {
           post.feature_image && (
@@ -95,4 +95,11 @@ const {post, posts, settings} = Astro.props as Props;
         }
       </div>
     </article>
+
+    <section class="max-w-screen-lg px-4 mx-auto pb-12 sm:px-6 lg:px-8">
+      <div style="height: 50vh; border-radius: 25px;">
+        <script is:inline src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-background-color="#18181B" data-text-color="#FFFFFF" data-button-color="#5046E4" data-button-text-color="#FFFFFF" data-title="Bald Man Japan" data-description="Get content delivered fresh to your inbox" data-icon="https://baldmanjapan.com/content/images/size/w192h192/size/w256h256/2023/10/bmjlogo.png" data-site="https://baldmanjapan.com/"></script>
+      </div>
+    </section>
+
   </Base>

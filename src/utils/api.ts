@@ -83,9 +83,10 @@ export const getSettings = async () => {
   }
   return null;
 };
+
 export type NonNullable<T> = T extends null | undefined ? never : T;
 
-export type Settings = NonNullable<Awaited<ReturnType<typeof getSettings>>>;
+export type Settings = NonNullable<Awaited<ReturnType<typeof getSettings>>> ;
 
 export const getAllTags = async () => {
   const api = new TSGhostContentAPI(ghostUrl, ghostApiKey, "v5.0");
