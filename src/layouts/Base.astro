@@ -14,7 +14,7 @@ import { ViewTransitions } from "astro:transitions";
 export interface Props {
   title?: string;
   meta_title?: string;
-  description?: string;
+  description?: string | null;
   image?: string | null;
   noindex?: boolean;
   canonical?: string;

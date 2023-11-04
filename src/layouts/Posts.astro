@@ -33,11 +33,10 @@ const { posts } = Astro.props;
           <FormattedDate date={post.published_at} />
           {post.tags?.slice(0, 2).map((tag: Tag) => (
             <a
-              href={`/tags/${slugify(tag.name)}`}
-              class="capitalize text-md relative z-10 rounded-lg bg-zinc-50 px-3 py-1.5 font-medium text-zinc-600 hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-400"
+              href={`/tag/${slugify(tag.name)}`}
+              class="text-md lowercase relative z-10 rounded-lg bg-zinc-50 px-3 py-1.5 font-medium text-zinc-600 hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-400"
             >
               {tag.name}
-              {console.log(tag.name)}
             </a>
           ))}
         </div>
