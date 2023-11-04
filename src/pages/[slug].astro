@@ -38,7 +38,6 @@ const {post, posts, settings} = Astro.props as Props;
                 height={50}
                 src={post.primary_author?.profile_image}
                 decoding="async"
-                loading="lazy"
               />
             </figure>
             <span>{post.primary_author?.name}</span>
@@ -73,7 +72,6 @@ const {post, posts, settings} = Astro.props as Props;
                 width={960}
                 height={480}
                 decoding="async"
-                loading="lazy"
               />
             </figure>
           )
