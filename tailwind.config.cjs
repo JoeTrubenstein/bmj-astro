@@ -5,6 +5,11 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        'darkbg': '#121212',
+        'lightpurp': '#6201F0',
+        'darkpurp': '#BB86FE',
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
