@@ -1,12 +1,24 @@
 ---
-import { getCollection } from "astro:content";
+// import { getCollection } from "astro:content";
+
 import HomePagination from "@components/HomePagination.astro";
 import Base from "@layouts/Base.astro";
 import Posts from "@layouts/Posts.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+// const posts = (await getCollection("blog")).sort(
+//   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+// );
+
+import { ghostClient } from '../lib/ghost';
+const posts = await ghostClient.posts
+    .browse({
+        limit: 'all',
+        include:'tags',
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+
 ---
 
 <Base>
