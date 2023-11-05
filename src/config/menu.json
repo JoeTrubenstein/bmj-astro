@@ -2,19 +2,23 @@
   "main": [
     {
       "name": "Home",
-      "url": "/"
+      "url": "../../"
     },
     {
       "name": "About",
       "url": "/about"
     },
     {
-      "name": "Tags",
-      "url": "/tags"
+      "name": "Curiosities",
+      "url": "/tag/curiosities"
     },
     {
-      "name": "Categories",
-      "url": "/categories"
+      "name": "Studies",
+      "url": "/tag/learning-japanese"
+    },
+    {
+      "name": "Journals",
+      "url": "/tag/japan-journals"
     }
   ]
 }

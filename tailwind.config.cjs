@@ -9,6 +9,10 @@ module.exports = {
         'darkbg': '#121212',
         'lightpurp': '#6201F0',
         'darkpurp': '#BB86FE',
+        'teal': '#00DBC6',
+        'lightcardpurp': '#BC86FD',
+        'chipgray': '#F4F6F8',
+        'chiptext': '#64748B'
       },
       typography: (theme) => ({
         DEFAULT: {

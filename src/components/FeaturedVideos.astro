@@ -7,7 +7,7 @@ import youtube from "@config/youtube.json";
   <h3
     class="mt-3 text-lg md:text-2xl font-semibold leading-6 text-zinc-900 dark:text-white group-hover:text-zinc-600 mb-4"
   >
-    Latest videos on YouTube:
+    My YouTube Channel:
   </h3>
   <ul
     class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 lg:mx-0 lg:max-w-none lg:grid-cols-3 text-white"
@@ -18,21 +18,20 @@ import youtube from "@config/youtube.json";
           <a
             href={`https://www.youtube.com/watch?v=${item.videoId}`}
             target="_blank"
-            class="relative top-0 block overflow-hidden rounded-2xl"
+            class="block overflow-hidden"
           >
             <figure>
               <Image
                 alt={item.title}
                 src={`https://i.ytimg.com/vi/${item.videoId}/maxresdefault.jpg`}
-                class="h-44 w-full object-cover"
-                width={309}
-                height={176}
+                class="h-auto w-full object-cover rounded-lg"
+                width={960}
+                height={480}
                 decoding="async"
               />
             </figure>
-            <div class="bg-zinc-900 p-4">
-              <span class="text-sm">{item.channelTitle}</span>
-              <p class="mt-1 text-xs text-zinc-400 h-8">{item.title}</p>
+            <div class="">
+              <p class="mt-5 line-clamp-3 text-md leading-6 text-zinc-600">{item.title}</p>
             </div>
           </a>
         </li>

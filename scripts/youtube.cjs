@@ -10,7 +10,7 @@ const youtube = google.youtube('v3');
 const params = {
   key: API_KEY,
   channelId: CHANNEL_ID,
-  order: 'date',
+  order: 'viewCount',
   part: 'snippet',
   maxResults: 5,
 };

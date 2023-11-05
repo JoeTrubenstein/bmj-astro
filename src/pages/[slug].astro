@@ -84,7 +84,7 @@ const {post, posts, settings} = Astro.props as Props;
         {
           post.tags?.map((tag: Tag) => (
             <a
-              href={`/tags/${slugify(tag.name)}`}
+              href={`/tag/${slugify(tag.name)}`}
               class="inline-block bg-zinc-200 rounded-full px-3 py-1 text-sm font-semibold text-zinc-700 mr-2 mb-2 dark:bg-darkbg dark:text-zinc-400"
             >
               #{tag.name}
