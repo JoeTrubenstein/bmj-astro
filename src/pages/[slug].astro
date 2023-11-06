@@ -2,7 +2,6 @@
 import Base from "@layouts/Base.astro";
 import { Image } from "astro:assets";
 import { slugify } from "@utils/slug";
-import FormattedDate from "@components/FormattedDate.astro";
 import CalendarIcon from "@icons/CalendarIcon.astro";
 import CategoryIcon from "@icons/CategoryIcon.astro";
 
@@ -44,7 +43,7 @@ const {post, posts, settings} = Astro.props as Props;
           </div>
           <div class="mx-3 flex items-center flex-wrap font-medium mt-2">
             <CalendarIcon />
-            <FormattedDate date={post.created_at} />
+            <time datetime={post.published_at}>{post.published_at?.split("T")[0]}</time>
           </div>
           <div class="mx-3 flex items-center flex-wrap font-medium mt-2">
             <CategoryIcon />
@@ -96,7 +95,7 @@ const {post, posts, settings} = Astro.props as Props;
 
     <section class="max-w-screen-lg px-4 mx-auto pb-12 sm:px-6 lg:px-8">
       <div style="height: 50vh; border-radius: 25px;">
-        <script is:inline src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-background-color="#18181B" data-text-color="#FFFFFF" data-button-color="#5046E4" data-button-text-color="#FFFFFF" data-title="Bald Man Japan" data-description="Get content delivered fresh to your inbox" data-icon="https://baldmanjapan.com/content/images/size/w192h192/size/w256h256/2023/10/bmjlogo.png" data-site="https://baldmanjapan.com/"></script>
+        <script is:inline src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-background-color="#00DBC6" data-text-color="#FFFFFF" data-button-color="#3700B3" data-button-text-color="#FFFFFF" data-title="Bald Man Japan" data-description="Get content delivered fresh to your inbox" data-icon="https://baldmanjapan.com/content/images/size/w192h192/size/w256h256/2023/10/bmjlogo.png" data-site="https://baldmanjapan.com/"></script>
       </div>
     </section>
 

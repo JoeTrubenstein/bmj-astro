@@ -32,13 +32,15 @@ const title = `Posts by Tag: ${tag.name}`;
 const description = `all of the articles we've posted and linked so far under the tag: ${tag.slug}`;
 ---
 
-<Base meta_title={title} description={description} image={tag.feature_image} blogpost>
+<Base meta_title={title} description={tag.description} image={tag.feature_image} blogpost>
   <main id="site-main" class="site-main outer">
     <div class="inner posts">
       <div class="post-feed">
         <section class="post-card post-card-large max-w-screen-md mx-auto">
+          <h1 class="text-2xl md:text-4xl font-bold mb-4 text-center">{tag.name}</h1>
+
           {tag.feature_image && (
-            <div class="post-card-image-link">
+            <div class="post-card-image-link mb-4">
               <img
                 class="post-card  rounded-lg"
                 src={tag.feature_image}
@@ -46,11 +48,8 @@ const description = `all of the articles we've posted and linked so far under th
               />
             </div>
           )}
-          <div class="post-card-content">
+          <div class="post-card-content mb-12">
             <div class="post-card-content-link">
-              <header class="post-card-header">
-                <h2 class="post-card-title">{tag.name}</h2>
-              </header>
               <div class="post-card-excerpt">
                 <p>
                   {tag.description
