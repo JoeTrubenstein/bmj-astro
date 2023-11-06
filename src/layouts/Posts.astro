@@ -15,7 +15,7 @@ const { posts } = Astro.props;
         {post.tags?.slice(0, 2).map((tag: Tag) => (
             <a
               href={`/tag/${slugify(tag.name)}`}
-              class="font-semibold text-pink-500 dark:text-pink-400 mr-2"
+              class="font-semibold text-pink-500 dark:text-pink-400 mr-2 hover:text-pink-300"
             >
               {'#' + tag.name}
             </a>
